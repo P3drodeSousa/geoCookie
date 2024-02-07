@@ -2,15 +2,17 @@ import { NextRequest, NextResponse } from "next/server";
 import countries from "./lib/countries.json";
 
 // run only on homepage
-export const config = {
+/* export const config = {
   matcher: "/",
-};
+}; */
 
 export async function middleware(req: NextRequest) {
   const { nextUrl: url, geo } = req;
   const country = geo.country || "US";
   const city = geo.city || "San Francisco";
   const region = geo.region || "CA";
+  const latitude = geo.latitude || "CA";
+  const longitude = geo.longitude || "CA";
 
   const countryInfo = countries.find((x) => x.cca2 === country);
 

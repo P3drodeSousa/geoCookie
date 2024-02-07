@@ -13,6 +13,7 @@ export default async function Home({ searchParams }) {
     languages,
   } = searchParams;
 
+  console.log(`https://flagcdn.com/96x72/${country.toLowerCase()}.png`);
   return (
     <>
       <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-50">
