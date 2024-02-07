@@ -11,6 +11,8 @@ export default async function Home({ searchParams }) {
     currencySymbol,
     name,
     languages,
+    longitude,
+    latitude,
   } = searchParams;
 
   console.log(`https://flagcdn.com/96x72/${country.toLowerCase()}.png`);
@@ -90,6 +92,14 @@ export default async function Home({ searchParams }) {
                 <p>
                   <strong>{"x-vercel-ip-country: "}</strong>
                   {country}
+                </p>
+                <p>
+                  <strong>{"latitude: "}</strong>
+                  {latitude}
+                </p>
+                <p>
+                  <strong>{"longitude: "}</strong>
+                  {longitude}
                 </p>
               </pre>
             </div>

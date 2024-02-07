@@ -27,6 +27,8 @@ export async function middleware(req: NextRequest) {
   url.searchParams.set("currencySymbol", currency.symbol);
   url.searchParams.set("name", currency.name);
   url.searchParams.set("languages", languages);
+  url.searchParams.set("latitude", latitude);
+  url.searchParams.set("longitude", longitude);
 
   return NextResponse.rewrite(url);
 }
